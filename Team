@@ -1,0 +1,44 @@
+import java.util.Hashtable;
+import java.util.Scanner;
+public class Pokemon {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	Scanner T = new Scanner(System.in);	
+		
+	Hashtable<Integer,String> Pokemon = new Hashtable<Integer,String>();	
+	System.out.println("Welcome to my Pokemon team generator!");
+	System.out.println("Select a number from 1 to 3 to choose a starter Pokemon from Kanto. 1"
+			+ " = Bulbasaur, 2 = Charmander, and 3 = Squirtle");
+	int U=T.nextInt();
+		
+	if(U == 1) {
+		Pokemon.put(1, "Bulbasaur");
+		System.out.println(Pokemon);
+	}
+	else if(U ==2) {
+		Pokemon.put(1, "Charmander");
+		System.out.println(Pokemon);
+	
+	}
+	else {
+		Pokemon.put(1, "Squirtle");
+		System.out.println(Pokemon);
+	}
+	
+	Scanner V = new Scanner(System.in);
+	
+	for(int i =2; i <= 6; i++) { 
+		
+	System.out.println("Type another Pokemon you would like to add");
+	String H = V.nextLine();
+		Pokemon.put(i, H);
+		System.out.println(Pokemon);	
+	}
+	
+	System.out.println("You have reached the end of the Pokemon Team Genreator. This is your final team");
+	System.out.println(Pokemon);
+	}
+
+}
